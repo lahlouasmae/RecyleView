@@ -80,3 +80,4 @@ service.create(new Model("Kendall Jenner", "https://example.com/kendall.jpg", 5.
 
 ### Video Descriptif
 
+https://github.com/user-attachments/assets/120a8999-00c4-493c-950e-6befec7761d7
