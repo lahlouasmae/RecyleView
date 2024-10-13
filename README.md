@@ -1,13 +1,51 @@
-# Projet de liste de models
+# Application de Gestion des Modèles
 
-Ce projet est une application Android simple qui affiche une liste de modèles (models) dans un `RecyclerView`. Chaque modèle contient un nom, une image, et une note. L'utilisateur peut également rechercher des modèles en utilisant une barre de recherche dans le menu.
+## Description
+Gestion des Modèles est une application Android intuitive permettant d'afficher une liste de modèles sous forme de RecyclerView. Chaque modèle est présenté avec un nom, une image, et une note. L'application offre également une fonctionnalité de recherche via une barre dédiée dans le menu, facilitant ainsi la recherche de modèles spécifiques.
 
-## Fonctionnalités
-
+## Objectifs du projet :
 - Affichage d'une liste de modèles avec leurs informations (nom, image, et note).
-- Recherche dynamique à travers les modèles avec un `SearchView` intégré au menu.
+- Recherche dynamique à travers les modèles avec un SearchView intégré au menu.
 - Partage d'un texte via l'option "Share" du menu.
 
+## Fonctionnalités
+- Liste des modèles : Affiche une collection de modèles sous forme de liste.
+- Recherche de modèles : Permet aux utilisateurs de rechercher un modèle dans la liste.
+- Partage d'un texte: via l'option "Share" du menu.
+
+## Structure du projet
+
+### Activités principales
+1. SplashActivity :
+   - Une activité de démarrage avec une animation appliquée sur une image (logo de l'application).
+   
+2. ListActivity :
+   - Gère l'affichage de la liste des modèles sous forme de RecyclerView.
+   - Chaque élément de la liste affiche le nom, une image, et une note.
+   
+3. ModelService :
+   - Service chargé de la gestion et du traitement des données liées aux modèles.
+
+### XML pour l'interface graphique
+
+- activity_splash.xml : Fichier de mise en page pour la SplashActivity pour afficher une animation de démarrage de l'application.
+- activity_list.xml : Fichier de mise en page pour la ListActivity affichant la liste des modèles.
+  - Utilisation d'un RecyclerView pour afficher les modèles.
+  
+- model_item.xml : Fichier de mise en page des éléments de la liste des modèles, avec des TextView pour le nom, ImageView pour l'image et le rating bar.
+- menu.xml : Menu de l'application avec les options de recherche et de partage.
+
+## Logique Java
+1. SplashActivity.java :
+   - Afficher une activité animée pour une durée déterminée avant de rediriger l'utilisateur vers ListActivity.
+   
+2. ListActivity.java :
+   - Charge la liste des modèles et les affiche dans un RecyclerView.
+
+3. ModelService.java :
+   - Assure la logique d'accès et de gestion des données des modèles.
+   
+4. ModelAdapter.java : Adapter pour gérer l'affichage des modèles dans le RecyclerView.
 ## Technologies utilisées
 
 - **Java** : Langage principal utilisé pour le développement de l'application.
@@ -17,15 +55,6 @@ Ce projet est une application Android simple qui affiche une liste de modèles (
 - **SearchView** : Barre de recherche intégrée au menu de l'application.
 - **ShareCompat** : Pour partager du texte via l'option de partage dans le menu.
 
-## Structure du projet
-
-Le projet est structuré comme suit :
-
-- `ListActivity.java` : Activité principale où la liste des modèles est affichée.
-- `Model.java` : Classe représentant un modèle avec des attributs `nom`, `image` et `note`.
-- `ModelAdapter.java` : Adapter pour gérer l'affichage des modèles dans le `RecyclerView`.
-- `ModelService.java` : Service pour gérer la création et la récupération des modèles.
-- `menu.xml` : Menu de l'application avec les options de recherche et de partage.
 
 ## Comment démarrer
 
